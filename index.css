@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+:root {
+    --blue: #00bcd4;
+    --black: #121212;
+    --dark-blue: #274548af;
+    --white: #fff;
+    --bg: #222222;
+    --btn-hover: #029db1;
+    --bg-gray: #262626;
+    --shadow: 0 2px 7px #00bbd4c4;
+    --hover-shadow: 0 10px 10px #03819243;
+    --btn-pd: 12px 20px;
+    --transform: translatey(-4px);
+    --bg-form: #292929;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+/* ===============Navbar=============== */
+.navbar {
+    background-color: var(--black);
+    padding: 20px 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 0 7px rgb(0, 0, 0);
+}
+
+/* logo */
+.navbar .logo h3 {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: var(--white);
+}
+
+.navbar .logo h3 span {
+    color: var(--blue);
+}
+
+/* menu */
+.navbar .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar .menu li a,
+.footer .footer-link li a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: block;
+    transition: all 0.3s;
+}
+
+.navbar .menu li a:not(.contact):hover,
+.footer .footer-link li a:hover {
+    color: var(--blue);
+
+}
+
+.navbar .menu li .contact,
+main .getInTouch .form-group .btn button {
+    padding: 12px 20px;
+    background-color: var(--blue);
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+}
+
+
+
+.navbar .menu li .contact:hover {
+    transform: translatey(-2px);
+    box-shadow: var(--hover-shadow);
+    background-color: var(--btn-hover);
+}
+
+/* ===============body=============== */
+main {
+    padding: 0 170px;
+}
+
+/* ----hero---- */
+main .hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+main .hero h1 {
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 78px;
+    color: white;
+}
+
+main .hero h1 span {
+    color: var(--blue);
+}
+
+main .hero p {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* btn */
+main .hero button {
+    padding: var(--btn-pd);
+    border-radius: 50px;
+    border: none;
+    margin-left: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+main .hero button:hover {
+    transform: var(--transform);
+    box-shadow: var(--hover-shadow);
+    background-color: var(--btn-hover);
+}
+
+main .hero .btn .btn-get {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* ----about---- */
+
+main .about h3,
+main .projects h3,
+main .getInTouch h3 {
+    font-size: 40px;
+    color: var(--blue);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+main .about .group-box {
+    margin-top: 30px;
+}
+
+main .about .group-box .only-box,
+main .about .group-box .small-box,
+main .projects .group-box .three-box,
+main .getInTouch .form-group,
+main .getInTouch .form-group .form-control input,
+main .getInTouch .form-group .form-control textarea {
+    border-radius: 12px;
+    border: 1px solid gray;
+    background-color: var(--bg-gray);
+    padding: 35px;
+    color: white;
+    font-family: sans-serif;
+    line-height: 24px;
+    transition: all 0.3s;
+}
+
+main .about .group-box .only-box:hover,
+main .about .group-box .small-box:hover,
+main .projects .group-box .three-box:hover,
+main .getInTouch .form-group:hover,
+main .getInTouch .form-group .btn button:hover {
+    transform: var(--transform);
+    box-shadow: var(--hover-shadow);
+}
+
+/* group-box */
+main .about .group-box .three-box,
+main .projects .group-box {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+main .about .group-box .three-box h5 {
+    font-size: 22px;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+main .about .group-box .small-box {
+    width: 33%;
+}
+
+/* ----Projects---- */
+main .projects {
+    margin-top: 100px;
+}
+
+
+main .projects .group-box .three-box {
+    width: 33%;
+}
+
+main .projects .group-box .three-box h5 {
+    font-size: 24px;
+    color: var(--blue);
+    margin-bottom: 15px;
+}
+
+main .projects .group-box .three-box .small-btn {
+    margin-top: 15px;
+}
+
+main .projects .group-box .three-box .small-btn button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    color: var(--blue);
+    font-weight: bold;
+    background-color: var(--dark-blue);
+    font-size: 12px;
+}
+
+/* Get in Touch */
+main .getInTouch {
+    width: 50%;
+    margin: 100px auto 0 auto;
+}
+
+main .getInTouch h3 {
+    margin-bottom: 30px;
+}
+
+main .getInTouch .form-group .form-control {
+    margin-bottom: 20px;
+}
+
+main .getInTouch .form-group .form-control label {
+    font-weight: bold;
+}
+
+main .getInTouch .form-group .form-control input,
+main .getInTouch .form-group .form-control textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    border: none;
+    outline: 1px solid gray;
+    background-color: var(--bg-form)
+}
+
+main .getInTouch .form-group .form-control input:focus,
+main .getInTouch .form-group .form-control textarea:focus {
+    outline: 1px solid var(--blue);
+}
+
+main .getInTouch .form-group .form-control textarea {
+    height: 200px;
+}
+
+main .getInTouch .form-group .btn {
+    width: 100%;
+}
+
+main .getInTouch .form-group .btn button {
+    width: 100%;
+    padding: 12px 0;
+    font-family: sans-serif;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+/* ===============footer=============== */
+.footer {
+    background-color: var(--black);
+    padding: 30px 0;
+    margin-top: 100px;
+
+}
+
+.footer p {
+    font-family: sans-serif;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.footer .footer-link {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* ===============Media-Query=============== */
+@media (max-width:1110px) {
+
+    /* -----navbar----- */
+    .navbar {
+        padding: 20px 100px;
+    }
+
+    /* -----hero----- */
+    main .hero p {
+        text-align: center;
+    }
+
+    /* -----about----- */
+    main .about .group-box .three-box {
+        flex-direction: column;
+    }
+
+    main .about .group-box .three-box .small-box {
+        width: 100%;
+    }
+
+    /* -----Projects---- */
+    main .projects .group-box {
+        flex-direction: column;
+    }
+
+    main .projects .group-box .three-box {
+        width: 100%;
+    }
+
+    /* ----Get-IN-Touch----- */
+    main .getInTouch {
+        width: 80%;
+    }
+
+}
+
+@media (max-width:880px) {
+
+    /* -----navbar----- */
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    main {
+        padding: 15px 30px;
+    }
+
+}
+
+@media (max-width:630px) {
+
+    /* -----navbar----- */
+    .navbar .menu {
+        display: none;
+    }
+
+    .navbar .logo {
+        margin: auto;
+    }
+
+    /* -----hero----- */
+    main .hero h1 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    main .hero p {
+        text-align: center;
+        font-size: 12px;
+        line-height: 17px;
+        margin-top: 5px;
+    }
+
+    main .hero .btn {
+        width: 100%;
+    }
+
+    main .hero .btn {
+        text-align: center;
+
+    }
+
+    /* ----Get-In-Touch---- */
+    main .getInTouch {
+        width: 100%;
+        padding: 0px;
+    }
+
+    main .projects .group-box .three-box .small-btn button {
+        padding: 9px 10px;
+        background-color: var(--dark-blue);
+        font-size: 10px;
+    }
+
+}
